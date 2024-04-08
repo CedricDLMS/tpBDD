@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace tpBddCodeFirst.Classes
 {
-    internal class Voiture
+    public class Voiture
     {
         public required int VoitureID { get; set; }
         public required string Name { get; set; }
@@ -21,5 +21,9 @@ namespace tpBddCodeFirst.Classes
         public virtual Categorie Categorie { get; set; }
 
         public List<Location> locations { get; set; }
+        //public override string ToString()
+        //{
+        //    return $" IDVoiture {} "
+        //}
     }
 }

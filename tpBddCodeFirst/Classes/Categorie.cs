@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tpBddCodeFirst.Classes
 {
-    internal class Categorie
+    public class Categorie
     {
         public int CategorieID { get; set; }
         public required string Libelle { get; set; }

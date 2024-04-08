@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tpBddCodeFirst")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6be7d3faf09c16f08c9c4115b177514fbe2bd9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+978bea470515b5f3e99ea2ab1f40099053d205bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("tpBddCodeFirst")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tpBddCodeFirst")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

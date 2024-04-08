@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using tpBddCodeFirst;
 
@@ -11,9 +12,11 @@ using tpBddCodeFirst;
 namespace tpBddCodeFirst.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240408104216_third")]
+    partial class third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -195,26 +198,6 @@ namespace tpBddCodeFirst.Migrations
                     b.HasIndex("MarqueID");
 
                     b.ToTable("Voitures");
-
-                    b.HasData(
-                        new
-                        {
-                            VoitureID = 1,
-                            CategorieID = 1,
-                            Couleur = "Rouge",
-                            Immat = "123-ABC",
-                            MarqueID = 1,
-                            Name = "Voiture A"
-                        },
-                        new
-                        {
-                            VoitureID = 2,
-                            CategorieID = 2,
-                            Couleur = "Bleu",
-                            Immat = "456-DEF",
-                            MarqueID = 2,
-                            Name = "Voiture B"
-                        });
                 });
 
             modelBuilder.Entity("tpBddCodeFirst.Classes.Location", b =>

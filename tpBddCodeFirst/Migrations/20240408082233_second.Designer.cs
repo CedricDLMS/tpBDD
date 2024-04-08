@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using tpBddCodeFirst;
 
@@ -11,9 +12,11 @@ using tpBddCodeFirst;
 namespace tpBddCodeFirst.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240408082233_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,26 +43,6 @@ namespace tpBddCodeFirst.Migrations
                     b.HasKey("CategorieID");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            CategorieID = 1,
-                            Libelle = "Categorie X",
-                            Prix_Km = 35.0
-                        },
-                        new
-                        {
-                            CategorieID = 2,
-                            Libelle = "Categorie Y",
-                            Prix_Km = 35.0
-                        },
-                        new
-                        {
-                            CategorieID = 3,
-                            Libelle = "Categorie Z",
-                            Prix_Km = 35.0
-                        });
                 });
 
             modelBuilder.Entity("tpBddCodeFirst.Classes.Client", b =>
@@ -143,23 +126,6 @@ namespace tpBddCodeFirst.Migrations
                     b.HasKey("MarqueID");
 
                     b.ToTable("Marques");
-
-                    b.HasData(
-                        new
-                        {
-                            MarqueID = 1,
-                            Name = "Marque A"
-                        },
-                        new
-                        {
-                            MarqueID = 2,
-                            Name = "Marque B"
-                        },
-                        new
-                        {
-                            MarqueID = 3,
-                            Name = "Marque C"
-                        });
                 });
 
             modelBuilder.Entity("tpBddCodeFirst.Classes.Voiture", b =>
@@ -195,26 +161,6 @@ namespace tpBddCodeFirst.Migrations
                     b.HasIndex("MarqueID");
 
                     b.ToTable("Voitures");
-
-                    b.HasData(
-                        new
-                        {
-                            VoitureID = 1,
-                            CategorieID = 1,
-                            Couleur = "Rouge",
-                            Immat = "123-ABC",
-                            MarqueID = 1,
-                            Name = "Voiture A"
-                        },
-                        new
-                        {
-                            VoitureID = 2,
-                            CategorieID = 2,
-                            Couleur = "Bleu",
-                            Immat = "456-DEF",
-                            MarqueID = 2,
-                            Name = "Voiture B"
-                        });
                 });
 
             modelBuilder.Entity("tpBddCodeFirst.Classes.Location", b =>

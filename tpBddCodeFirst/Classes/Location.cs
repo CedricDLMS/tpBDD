@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace tpBddCodeFirst.Classes
 {
-    internal class Location
+    public class Location
     {
         public int LocationID { get; set; }
         public required double Nb_Km {  get; set; }
@@ -20,5 +20,9 @@ namespace tpBddCodeFirst.Classes
         public virtual Voiture Voiture { get; set; }
         
         public virtual Client Client { get; set; }
+        public override string ToString()
+        {
+            return $"ID : {LocationID} | VoitureID : {VoitureID} | Nb_KM : {Nb_Km} | Debut : {Date_Debut} | Fin : {Date_Fin} | ClientId < {ClientID} > ";
+        }
     }
 }
